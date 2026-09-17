@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:warung_digital/core/widgets/price_tag.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -7,7 +8,15 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Warung Digital')),
       body: const Center(
-        child: Text('Belum ada menu'),
+         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Belum ada menu'),
+            PriceTag(amount: 18082026),
+            PriceTag(amount: 2147483647),
+            PriceTag(amount: 9007199254740991),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
